@@ -33,3 +33,4 @@ dependency-reduced-pom.xml
 README.html
 .gitignore
 src/test/
+/arithmetic.iml

@@ -3,6 +3,8 @@ public static String method(){
     return "zhangze";
 
 }
-public static String method1(){
+public static boolean method11(){
+
+    "test"
 
 }
