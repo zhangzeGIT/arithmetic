@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="user" class="com.zhangze.spring.test.User">
+        <property name="p">
+            <list>
+                <value>aa</value>
+                <value>bb</value>
+            </list>
+        </property>
+        <constructor-arg index="0">
+            <value>zhangze</value>
+        </constructor-arg>
+        <qualifier type="org.springframework.beans.factory.annotation.Qualifier" value="qf"/>
+    </bean>
+
+    <bean id="getBeanTest" class="com.zhangze.spring.test.GetBeanTest">
+        <lookup-method name="getBean" bean="teacher"/>
+    </bean>
+    <bean id="teacher" class="com.zhangze.spring.test.Teacher"/>
+
+    <bean id="testChangeMethod" class="com.zhangze.spring.test.TestChangeMethod">
+        <replaced-method name="changeMe" replacer="replacer"/>
+    </bean>
+    <bean id="replacer" class="com.zhangze.spring.test.TestMethodReplacer"/>
+</beans>

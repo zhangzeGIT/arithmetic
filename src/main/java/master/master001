@@ -3,3 +3,6 @@ public static String method(){
     return "zhangze";
 
 }
+public static String method1(){
+
+}
